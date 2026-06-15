@@ -1,0 +1,88 @@
+================================================================
+ ANALIZADOR LÉXICO - SUBCONJUNTO DE KOTLIN
+================================================================
+Archivo analizado : algoritmos/algoritmo1.kt
+Analizado por     : JorgedelCampo
+Fecha y hora      : 14-06-2026 20:44:48
+Tokens reconocidos: 70
+Errores léxicos   : 0
+
+----------------------------------------------------------------
+ TOKENS RECONOCIDOS
+----------------------------------------------------------------
+   #  TIPO           LEXEMA                  LÍNEA   COL
+   1  FUN            fun                         4     1
+   2  ID             main                        4     5
+   3  PAR_IZQ        (                           4     9
+   4  PAR_DER        )                           4    10
+   5  LLAVE_IZQ      {                           4    12
+   6  VAL            val                         5     5
+   7  ID             edad                        5     9
+   8  DOS_PUNTOS     :                           5    13
+   9  TIPO           Int                         5    15
+  10  ASIGNAR        =                           5    19
+  11  ENTERO         20                          5    21
+  12  VAR            var                         6     5
+  13  ID             numero                      6     9
+  14  DOS_PUNTOS     :                           6    15
+  15  TIPO           Int                         6    17
+  16  ASIGNAR        =                           6    21
+  17  ENTERO         7                           6    23
+  18  IF             if                          8     5
+  19  PAR_IZQ        (                           8     8
+  20  ID             edad                        8     9
+  21  MAYOR_IGUAL    >=                          8    14
+  22  ENTERO         18                          8    17
+  23  PAR_DER        )                           8    19
+  24  LLAVE_IZQ      {                           8    21
+  25  PRINTLN        println                     9     9
+  26  PAR_IZQ        (                           9    16
+  27  CADENA         "Es mayor de edad"          9    17
+  28  PAR_DER        )                           9    35
+  29  LLAVE_DER      }                          10     5
+  30  ELSE           else                       10     7
+  31  LLAVE_IZQ      {                          10    12
+  32  PRINTLN        println                    11     9
+  33  PAR_IZQ        (                          11    16
+  34  CADENA         "Es menor de edad"         11    17
+  35  PAR_DER        )                          11    35
+  36  LLAVE_DER      }                          12     5
+  37  VAL            val                        14     5
+  38  ID             residuo                    14     9
+  39  DOS_PUNTOS     :                          14    16
+  40  TIPO           Int                        14    18
+  41  ASIGNAR        =                          14    22
+  42  ID             numero                     14    24
+  43  MENOS          -                          14    31
+  44  PAR_IZQ        (                          14    33
+  45  ID             numero                     14    34
+  46  DIV            /                          14    41
+  47  ENTERO         2                          14    43
+  48  PAR_DER        )                          14    44
+  49  POR            *                          14    46
+  50  ENTERO         2                          14    48
+  51  IF             if                         15     5
+  52  PAR_IZQ        (                          15     8
+  53  ID             residuo                    15     9
+  54  IGUAL          ==                         15    17
+  55  ENTERO         0                          15    20
+  56  PAR_DER        )                          15    21
+  57  LLAVE_IZQ      {                          15    23
+  58  PRINTLN        println                    16     9
+  59  PAR_IZQ        (                          16    16
+  60  CADENA         "El numero es par"         16    17
+  61  PAR_DER        )                          16    35
+  62  LLAVE_DER      }                          17     5
+  63  ELSE           else                       17     7
+  64  LLAVE_IZQ      {                          17    12
+  65  PRINTLN        println                    18     9
+  66  PAR_IZQ        (                          18    16
+  67  CADENA         "El numero es impar"       18    17
+  68  PAR_DER        )                          18    37
+  69  LLAVE_DER      }                          19     5
+  70  LLAVE_DER      }                          20     1
+
+----------------------------------------------------------------
+ ERRORES LÉXICOS
+----------------------------------------------------------------
+  Sin errores léxicos.
