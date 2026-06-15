@@ -1,0 +1,132 @@
+================================================================
+ ANALIZADOR LÉXICO - SUBCONJUNTO DE KOTLIN
+================================================================
+Archivo analizado : algoritmos/algoritmo3.kt
+Analizado por     : JoseGavino
+Fecha y hora      : 14-06-2026 20:45:23
+Tokens reconocidos: 114
+Errores léxicos   : 0
+
+----------------------------------------------------------------
+ TOKENS RECONOCIDOS
+----------------------------------------------------------------
+   #  TIPO           LEXEMA                  LÍNEA   COL
+   1  FUN            fun                         3     1
+   2  ID             sumar                       3     5
+   3  PAR_IZQ        (                           3    10
+   4  ID             a                           3    11
+   5  DOS_PUNTOS     :                           3    12
+   6  TIPO           Int                         3    14
+   7  COMA           ,                           3    17
+   8  ID             b                           3    19
+   9  DOS_PUNTOS     :                           3    20
+  10  TIPO           Int                         3    22
+  11  PAR_DER        )                           3    25
+  12  DOS_PUNTOS     :                           3    26
+  13  TIPO           Int                         3    28
+  14  LLAVE_IZQ      {                           3    32
+  15  RETURN         return                      4     5
+  16  ID             a                           4    12
+  17  MAS            +                           4    14
+  18  ID             b                           4    16
+  19  LLAVE_DER      }                           5     1
+  20  FUN            fun                         7     1
+  21  ID             esAprobado                  7     5
+  22  PAR_IZQ        (                           7    15
+  23  ID             nota                        7    16
+  24  DOS_PUNTOS     :                           7    20
+  25  TIPO           Int                         7    22
+  26  PAR_DER        )                           7    25
+  27  DOS_PUNTOS     :                           7    26
+  28  TIPO           Boolean                     7    28
+  29  LLAVE_IZQ      {                           7    36
+  30  RETURN         return                      8     5
+  31  ID             nota                        8    12
+  32  MAYOR_IGUAL    >=                          8    17
+  33  ENTERO         7                           8    20
+  34  OR             ||                          8    22
+  35  ID             nota                        8    25
+  36  IGUAL          ==                          8    30
+  37  ENTERO         6                           8    33
+  38  LLAVE_DER      }                           9     1
+  39  FUN            fun                        11     1
+  40  ID             main                       11     5
+  41  PAR_IZQ        (                          11     9
+  42  PAR_DER        )                          11    10
+  43  LLAVE_IZQ      {                          11    12
+  44  VAL            val                        12     5
+  45  ID             resultado                  12     9
+  46  DOS_PUNTOS     :                          12    18
+  47  TIPO           Int                        12    20
+  48  ASIGNAR        =                          12    24
+  49  ID             sumar                      12    26
+  50  PAR_IZQ        (                          12    31
+  51  ENTERO         4                          12    32
+  52  COMA           ,                          12    33
+  53  ENTERO         8                          12    35
+  54  PAR_DER        )                          12    36
+  55  PRINTLN        println                    13     5
+  56  PAR_IZQ        (                          13    12
+  57  CADENA         "La suma es: "             13    13
+  58  PAR_DER        )                          13    27
+  59  PRINTLN        println                    14     5
+  60  PAR_IZQ        (                          14    12
+  61  ID             resultado                  14    13
+  62  PAR_DER        )                          14    22
+  63  VAL            val                        16     5
+  64  ID             nombres                    16     9
+  65  DOS_PUNTOS     :                          16    16
+  66  TIPO           List                       16    18
+  67  ASIGNAR        =                          16    23
+  68  ID             listOf                     16    25
+  69  PAR_IZQ        (                          16    31
+  70  CADENA         "Ana"                      16    32
+  71  COMA           ,                          16    37
+  72  CADENA         "Luis"                     16    39
+  73  COMA           ,                          16    45
+  74  CADENA         "Carlos"                   16    47
+  75  PAR_DER        )                          16    55
+  76  PRINTLN        println                    17     5
+  77  PAR_IZQ        (                          17    12
+  78  ID             nombres                    17    13
+  79  PAR_DER        )                          17    20
+  80  PRINT          print                      19     5
+  81  PAR_IZQ        (                          19    10
+  82  CADENA         "Ingrese su nota: "        19    11
+  83  PAR_DER        )                          19    30
+  84  VAL            val                        20     5
+  85  ID             nota                       20     9
+  86  DOS_PUNTOS     :                          20    13
+  87  TIPO           Int                        20    15
+  88  ASIGNAR        =                          20    19
+  89  ENTERO         9                          20    21
+  90  IF             if                         21     5
+  91  PAR_IZQ        (                          21     8
+  92  ID             esAprobado                 21     9
+  93  PAR_IZQ        (                          21    19
+  94  ID             nota                       21    20
+  95  PAR_DER        )                          21    24
+  96  AND            &&                         21    26
+  97  ID             nota                       21    29
+  98  MENOR_IGUAL    <=                         21    34
+  99  ENTERO         10                         21    37
+ 100  PAR_DER        )                          21    39
+ 101  LLAVE_IZQ      {                          21    41
+ 102  PRINTLN        println                    22     9
+ 103  PAR_IZQ        (                          22    16
+ 104  CADENA         "Aprobado"                 22    17
+ 105  PAR_DER        )                          22    27
+ 106  LLAVE_DER      }                          23     5
+ 107  ELSE           else                       23     7
+ 108  LLAVE_IZQ      {                          23    12
+ 109  PRINTLN        println                    24     9
+ 110  PAR_IZQ        (                          24    16
+ 111  CADENA         "Reprobado"                24    17
+ 112  PAR_DER        )                          24    28
+ 113  LLAVE_DER      }                          25     5
+ 114  LLAVE_DER      }                          26     1
+
+----------------------------------------------------------------
+ ERRORES LÉXICOS
+----------------------------------------------------------------
+  Sin errores léxicos.
