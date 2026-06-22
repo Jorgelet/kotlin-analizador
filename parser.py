@@ -15,6 +15,9 @@ precedence = (
 )
 
 
+# Integrante 1 - Reglas definidas: programa, lista de sentencias, bloque,
+# expresiones aritmeticas, impresion (print/println), llamadas a funcion,
+# estructura de datos List, if simple, funcion sin retorno.
 def p_programa(p):
     "programa : lista_sentencias"
     p[0] = ("programa", p[1])
