@@ -21,6 +21,9 @@ tipos_datos = {"Int", "Double", "String", "Boolean", "Array", "List", "Map"}
 
 literales_booleanos = {"true", "false"}
 
+estructuras_datos = {"listOf": "LISTOF", "arrayOf": "ARRAYOF", "mapOf": "MAPOF", "to": "TO"}
+tokens_avance2 = ["LISTOF", "ARRAYOF", "MAPOF", "TO"]
+
 tokens_integrante2 = ["ENTERO", "FLOTANTE", "CADENA", "BOOLEANO", "TIPO"]
 
 tokens_integrante3 = [
@@ -60,6 +63,8 @@ def t_ID(t):
         t.type = "TIPO"
     elif t.value in literales_booleanos:
         t.type = "BOOLEANO"
+    elif t.value in estructuras_datos:
+        t.type = estructuras_datos[t.value]
     return t
 
 
@@ -127,7 +132,7 @@ t_LLAVE_DER = r"\}"
 t_COMA = r","
 t_DOS_PUNTOS = r":"
 
-tokens = tokens_integrante1 + tokens_integrante2 + tokens_integrante3
+tokens = tokens_integrante1 + tokens_integrante2 + tokens_integrante3 + tokens_avance2
 
 errores_lexicos = []
 
