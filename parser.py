@@ -131,7 +131,9 @@ def p_parametro(p):
     "parametro : ID DOS_PUNTOS TIPO"
     p[0] = (p[1], p[3])
 
-
+# Integrante 2 - Reglas definidas: declaracion con tipo e inferida, asignacion,
+# ingreso por teclado (readln), estructura de datos Array, if-else,
+# funcion con retorno.
 def p_declaracion_con_tipo(p):
     """declaracion : VAL ID DOS_PUNTOS TIPO ASIGNAR expresion
                    | VAR ID DOS_PUNTOS TIPO ASIGNAR expresion"""
