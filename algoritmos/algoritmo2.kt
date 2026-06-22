@@ -1,23 +1,25 @@
-/*
- Algoritmo 2: suma de los numeros del 1 al limite usando un bucle while
-*/
+// Algoritmo 2: clasificacion con arreglo y entrada de datos
+// (Array, if-else, funcion con retorno, readln)
+fun calcularDoble(x: Int): Int {
+    return x * 2
+}
 
 fun main() {
-    val limite: Int = 10
-    var contador: Int = 1
-    var suma: Int = 0
+    val numeros: Array = arrayOf(1, 2, 3, 4)
+    var total: Int = 0
+    total = total + 100 - 25
 
-    while (contador <= limite) {
-        suma = suma + contador
-        contador = contador + 1
-    }
+    print("Ingrese un valor: ")
+    val entrada: String = readln()
 
-    print("La suma total es: ")
-    println(suma)
-
-    val promedio: Double = 5.5
     val activo: Boolean = true
-    if (activo && promedio > 5.0) {
-        println("Promedio aprobado")
+    if (total >= 50 || activo == true) {
+        println("Mayor o activo")
+    } else {
+        println("Menor")
     }
+
+    val doble: Int = calcularDoble(total)
+    println(numeros)
+    println(doble)
 }
