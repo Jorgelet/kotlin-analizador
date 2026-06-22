@@ -1,26 +1,21 @@
-// Algoritmo 3: funciones con y sin retorno, y estructuras de datos
-
-fun sumar(a: Int, b: Int): Int {
-    return a + b
-}
-
-fun esAprobado(nota: Int): Boolean {
-    return nota >= 7 || nota == 6
-}
+// Algoritmo 3: tabla y bucle (Map, while, funcion de una expresion, booleanas)
+fun cuadrado(n: Int): Int = n * n
 
 fun main() {
-    val resultado: Int = sumar(4, 8)
-    println("La suma es: ")
-    println(resultado)
+    val edades: Map = mapOf("Ana" to 20, "Luis" to 25)
+    var contador: Int = 1
+    var acumulado: Int = 0
 
-    val nombres: List = listOf("Ana", "Luis", "Carlos")
-    println(nombres)
-
-    print("Ingrese su nota: ")
-    val nota: Int = 9
-    if (esAprobado(nota) && nota <= 10) {
-        println("Aprobado")
-    } else {
-        println("Reprobado")
+    while (contador <= 5) {
+        acumulado = acumulado + cuadrado(contador)
+        contador = contador + 1
     }
+
+    val aprobado: Boolean = acumulado > 10 && !false
+    if (aprobado || contador == 6) {
+        println("Fin del ciclo")
+    }
+
+    println(edades)
+    println(acumulado)
 }
