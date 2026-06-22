@@ -168,7 +168,9 @@ def p_funcion_con_retorno(p):
     "declaracion_funcion : FUN ID PAR_IZQ parametros PAR_DER DOS_PUNTOS TIPO bloque"
     p[0] = ("funcion", p[2], p[4], p[7], p[8])
 
-
+# Integrante 3 - Reglas definidas: expresiones booleanas (AND/OR/NOT) y de
+# comparacion (==, !=, >, <, >=, <=), estructura de datos Map, while,
+# funcion de una sola expresion, retorno.
 def p_expresion_logica(p):
     """expresion : expresion AND expresion
                  | expresion OR expresion"""

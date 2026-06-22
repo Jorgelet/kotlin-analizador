@@ -1,0 +1,8 @@
+ANALIZADOR SINTACTICO - SUBCONJUNTO DE KOTLIN
+Archivo : algoritmos/algoritmo3.kt
+Usuario : josegavinov
+Fecha   : 21-06-2026 22:00:15
+Resultado: CORRECTO
+Errores sintacticos: 0
+
+Sin errores sintacticos. El programa es valido.
