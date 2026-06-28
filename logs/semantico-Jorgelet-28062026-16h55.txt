@@ -1,0 +1,9 @@
+ANALIZADOR SEMANTICO - SUBCONJUNTO DE KOTLIN
+Archivo : algoritmos/errores_semanticos1.kt
+Usuario : Jorgelet
+Fecha   : 28-06-2026 16:55:10
+Resultado: CON ERRORES
+Errores semanticos: 2
+
+- "x" ya fue declarado en este ambito (redeclaracion).
+- Variable o identificador "y" usado sin declarar.
