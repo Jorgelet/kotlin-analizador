@@ -108,6 +108,24 @@ def regla_tipo_en_declaracion(nombre, tipo_declarado, tipo_expresion):
         )
 
 
+# Integrante 3 - Reglas semanticas: (5) la condicion de if/while debe ser
+# Boolean, (6) llamada a una funcion no declarada.
+def regla_condicion_booleana(tipo_condicion, estructura):
+    if tipo_condicion is not None and tipo_condicion != "Boolean":
+        _error(
+            f'La condicion de "{estructura}" debe ser Boolean, '
+            f"pero es de tipo {tipo_condicion}."
+        )
+
+
+def regla_funcion_no_declarada(nombre, ambito):
+    info = ambito.buscar(nombre)
+    if info is None:
+        _error(f'Funcion "{nombre}" invocada pero no esta declarada.')
+    elif info["clase"] != "fun":
+        _error(f'"{nombre}" no es una funcion, no se puede invocar.')
+
+
 def recorrer_expr(nodo, ambito):
     if nodo is None:
         return
@@ -120,6 +138,7 @@ def recorrer_expr(nodo, ambito):
     elif etiqueta == "not":
         recorrer_expr(nodo[1], ambito)
     elif etiqueta == "llamada":
+        regla_funcion_no_declarada(nodo[1], ambito)
         for arg in nodo[2]:
             recorrer_expr(arg, ambito)
     elif etiqueta in ("list", "array"):
@@ -154,17 +173,22 @@ def recorrer_sentencia(nodo, ambito):
         for arg in nodo[2]:
             recorrer_expr(arg, ambito)
     elif etiqueta == "llamada":
+        regla_funcion_no_declarada(nodo[1], ambito)
         for arg in nodo[2]:
             recorrer_expr(arg, ambito)
     elif etiqueta == "return":
         recorrer_expr(nodo[1], ambito)
     elif etiqueta in ("if", "if-else"):
-        recorrer_expr(nodo[1], ambito)
+        condicion = nodo[1]
+        recorrer_expr(condicion, ambito)
+        regla_condicion_booleana(inferir_tipo(condicion, ambito), "if")
         recorrer(nodo[2][1], Ambito(ambito))
         if etiqueta == "if-else":
             recorrer(nodo[3][1], Ambito(ambito))
     elif etiqueta == "while":
-        recorrer_expr(nodo[1], ambito)
+        condicion = nodo[1]
+        recorrer_expr(condicion, ambito)
+        regla_condicion_booleana(inferir_tipo(condicion, ambito), "while")
         recorrer(nodo[2][1], Ambito(ambito))
     elif etiqueta in ("funcion", "funcion-expr"):
         _, _nombre, params, _tipo_ret, cuerpo = nodo
