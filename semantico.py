@@ -92,6 +92,22 @@ def regla_redeclaracion(nombre, ambito):
     return True
 
 
+# Integrante 2 - Reglas semanticas: (3) reasignacion a un val (inmutable),
+# (4) incompatibilidad de tipo en declaracion con tipo explicito.
+def regla_asignacion_a_val(nombre, ambito):
+    info = ambito.buscar(nombre)
+    if info and info["clase"] == "val":
+        _error(f'No se puede reasignar "{nombre}": es un val (inmutable).')
+
+
+def regla_tipo_en_declaracion(nombre, tipo_declarado, tipo_expresion):
+    if tipo_declarado and tipo_expresion and tipo_declarado != tipo_expresion:
+        _error(
+            f'Tipo incompatible en "{nombre}": se declaro {tipo_declarado} '
+            f"pero se asigno un valor de tipo {tipo_expresion}."
+        )
+
+
 def recorrer_expr(nodo, ambito):
     if nodo is None:
         return
@@ -127,10 +143,12 @@ def recorrer_sentencia(nodo, ambito):
         regla_redeclaracion(nombre, ambito)
         recorrer_expr(expr, ambito)
         tipo_expr = inferir_tipo(expr, ambito)
+        regla_tipo_en_declaracion(nombre, tipo_declarado, tipo_expr)
         ambito.declarar(nombre, {"clase": clase, "tipo": tipo_declarado or tipo_expr})
     elif etiqueta == "asignacion":
         _, nombre, expr = nodo
-        regla_variable_no_declarada(nombre, ambito)
+        if regla_variable_no_declarada(nombre, ambito):
+            regla_asignacion_a_val(nombre, ambito)
         recorrer_expr(expr, ambito)
     elif etiqueta == "impresion":
         for arg in nodo[2]:
