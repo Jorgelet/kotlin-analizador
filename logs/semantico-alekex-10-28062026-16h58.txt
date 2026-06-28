@@ -1,0 +1,9 @@
+ANALIZADOR SEMANTICO - SUBCONJUNTO DE KOTLIN
+Archivo : algoritmos/errores_semanticos2.kt
+Usuario : alekex-10
+Fecha   : 28-06-2026 16:58:18
+Resultado: CON ERRORES
+Errores semanticos: 2
+
+- Tipo incompatible en "nombre": se declaro String pero se asigno un valor de tipo Int.
+- No se puede reasignar "edad": es un val (inmutable).
