@@ -1,0 +1,9 @@
+ANALIZADOR SEMANTICO - SUBCONJUNTO DE KOTLIN
+Archivo : algoritmos/errores_semanticos3.kt
+Usuario : josegavinov
+Fecha   : 28-06-2026 16:59:48
+Resultado: CON ERRORES
+Errores semanticos: 2
+
+- La condicion de "if" debe ser Boolean, pero es de tipo Int.
+- Funcion "inexistente" invocada pero no esta declarada.
